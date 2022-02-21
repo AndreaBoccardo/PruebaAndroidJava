@@ -46,9 +46,7 @@ public class HeroeViewModel extends ViewModel {
         });
     }
 
-    public MutableLiveData<Heroe> getHeroe() {
-        return heroe;
-    }
+    public MutableLiveData<Heroe> getHeroe() { return heroe; }
 
     public MutableLiveData<HeroeItem> getSuperHeroe() {
         return superHeroe;
