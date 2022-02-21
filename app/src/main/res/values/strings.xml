@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">PruebaAndroidJava</string>
+    <string name="titulo_fragmento_lista">Lista de SuperHéroes</string>
+    <string name="titulo_fragmento_detalle">Características de SuperHéroe seleccionado</string>
+    <string name="msg_error">Error al conectar al Api</string>
+    <string name="nombre">Nombre: </string>
+    <string name="alias">Alias: </string>
+    <string name="genero">Género: </string>
+    <string name="raza">Raza: </string>
+    <string name="altura">Altura: </string>
+    <string name="peso">Peso: </string>
 </resources>
