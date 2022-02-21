@@ -2,7 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <data>
+        <import type="cl.desafiolatm.pruebaandroidjava.modelo.HeroeItem"/>
+        <variable
+            name="superHeroe"
+            type="HeroeItem" />
+    </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -49,8 +54,7 @@
                             android:id="@+id/tvNombreHeroe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-
-
+                            android:text="@{superHeroe.name}"
                             android:textSize="34sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -62,8 +66,7 @@
                             android:id="@+id/tvSlug"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-
-
+                            android:text="@{superHeroe.slug}"
                             android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"

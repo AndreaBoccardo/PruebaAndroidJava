@@ -2,8 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-
+    <data>
+        <import type="cl.desafiolatm.pruebaandroidjava.modelo.HeroeItem"/>
+        <variable
+            name="superHeroe"
+            type="HeroeItem" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="36dp"
-
+                    android:text="@{superHeroe.name}"
                     android:textAlignment="center"
                     android:textSize="30sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -72,11 +76,10 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="5dp"
                             android:layout_weight="1"
-
+                            android:text="@{superHeroe.biography.fullName}"
                             android:textAlignment="textStart"
                             android:textSize="20sp" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:id="@+id/ly2"
@@ -105,7 +108,7 @@
                             android:layout_weight="1"
                             android:textSize="20sp"
                             android:textAlignment="textStart"
-                            />
+                            android:text="@{superHeroe.biography.aliases.get(0)}" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -135,7 +138,7 @@
                             android:layout_weight="1"
                             android:textSize="20sp"
                             android:textAlignment="textStart"
-                            />
+                            android:text="@{superHeroe.appearance.gender}" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -164,7 +167,7 @@
                             android:layout_weight="1"
                             android:textSize="20sp"
                             android:textAlignment="textStart"
-                            />
+                            android:text="@{superHeroe.appearance.race}" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -193,7 +196,7 @@
                             android:layout_weight="1"
                             android:textSize="20sp"
                             android:textAlignment="textStart"
-                            />
+                            android:text="@{superHeroe.appearance.height.get(1)}" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -223,7 +226,7 @@
                             android:layout_weight="1"
                             android:textSize="20sp"
                             android:textAlignment="textStart"
-                            />
+                            android:text="@{superHeroe.appearance.weight.get(1)}" />
                     </LinearLayout>
                 </LinearLayout>
 
