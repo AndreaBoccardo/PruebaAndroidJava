@@ -9,10 +9,14 @@ public class ClienteRetrofit {
 
     private ClienteRetrofit(){}
 
-    public static Retrofit getInstance(){
+    public static String URL_BASE = "https://akabab.github.io/superhero-api/api/";
+
+    public static Retrofit getInstance(String url){
         if(instance == null){
-            instance = new Retrofit.Builder().baseUrl("https://akabab.github.io/superhero-api/api/")
-                    .addConverterFactory(GsonConverterFactory.create()).build();
+            instance = new Retrofit.Builder()
+                    .baseUrl(url)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
         }
         return instance;
     }

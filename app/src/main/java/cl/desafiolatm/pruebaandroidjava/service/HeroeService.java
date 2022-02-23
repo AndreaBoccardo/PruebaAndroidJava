@@ -8,4 +8,7 @@ public interface HeroeService {
 
     @GET("all.json")
     public Call<Heroe> getHeroe();
+
+    @GET("id/1.json")
+    public Call<Heroe> getHeroe1();
 }

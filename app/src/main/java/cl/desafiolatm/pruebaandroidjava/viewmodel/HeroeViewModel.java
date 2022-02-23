@@ -30,7 +30,7 @@ public class HeroeViewModel extends ViewModel {
 
     private void load(){
         heroe = new MutableLiveData<>();
-        HeroeService service = ClienteRetrofit.getInstance().create(HeroeService.class);
+        HeroeService service = ClienteRetrofit.getInstance(ClienteRetrofit.URL_BASE).create(HeroeService.class);
         Call<Heroe> call = service.getHeroe();
         call.enqueue(new Callback<Heroe>() {
             @Override
